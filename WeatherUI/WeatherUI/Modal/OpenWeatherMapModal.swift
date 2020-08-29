@@ -8,19 +8,19 @@
 
 
 
-struct OpenWeatherMapResponse: Codable {
+struct OpenWeatherMapResponse: Decodable {
     
-    let main: Weather
+    var main: Weather
 
 }
 
-struct Weather: Codable {
+struct Weather: Decodable {
     
-    let temp:       Double
-    let feels_like: Double
-    let temp_min:   Double
-    let temp_max:   Double
-    let pressure:   Double
-    let humidity:   Double
+    var temp:       Double?
+//    let feels_like: Double
+//    let temp_min:   Double
+//    let temp_max:   Double
+//    let pressure:   Double
+    var humidity:   Double?
     
 }

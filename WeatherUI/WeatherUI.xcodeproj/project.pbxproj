@@ -13,6 +13,10 @@
 		80EA1F4924F8F96D007460A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EA1F4824F8F96D007460A0 /* Assets.xcassets */; };
 		80EA1F4C24F8F96D007460A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80EA1F4B24F8F96D007460A0 /* Preview Assets.xcassets */; };
 		80EA1F4F24F8F96D007460A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EA1F4D24F8F96D007460A0 /* LaunchScreen.storyboard */; };
+		80ED446224FA31AA008762C4 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ED446124FA31AA008762C4 /* APIConfig.swift */; };
+		80ED446424FA3211008762C4 /* OpenWeatherMapModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ED446324FA3211008762C4 /* OpenWeatherMapModal.swift */; };
+		80ED446724FA33B1008762C4 /* OpenWeatherMapWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ED446624FA33B1008762C4 /* OpenWeatherMapWebServices.swift */; };
+		80ED446A24FA376F008762C4 /* WeatherViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80ED446924FA376F008762C4 /* WeatherViewModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		80EA1F4B24F8F96D007460A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		80EA1F4E24F8F96D007460A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80EA1F5024F8F96D007460A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80ED446124FA31AA008762C4 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIConfig.swift; path = WeatherUI/APIConfig.swift; sourceTree = SOURCE_ROOT; };
+		80ED446324FA3211008762C4 /* OpenWeatherMapModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OpenWeatherMapModal.swift; path = WeatherUI/Modal/OpenWeatherMapModal.swift; sourceTree = SOURCE_ROOT; };
+		80ED446624FA33B1008762C4 /* OpenWeatherMapWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapWebServices.swift; sourceTree = "<group>"; };
+		80ED446924FA376F008762C4 /* WeatherViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,13 +45,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		80B3A29824F8FD2B00FBCA30 /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
 		80EA1F3624F8F965007460A0 = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +64,9 @@
 		80EA1F4124F8F965007460A0 /* WeatherUI */ = {
 			isa = PBXGroup;
 			children = (
-				80B3A29824F8FD2B00FBCA30 /* Modal */,
+				80ED446B24FA37B7008762C4 /* Modal */,
+				80ED446824FA3740008762C4 /* ViewModal */,
+				80ED446524FA33A0008762C4 /* WebServices */,
 				80EA1F4224F8F965007460A0 /* AppDelegate.swift */,
 				80EA1F4424F8F965007460A0 /* SceneDelegate.swift */,
 				80EA1F4624F8F965007460A0 /* ContentView.swift */,
@@ -81,6 +84,31 @@
 				80EA1F4B24F8F96D007460A0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		80ED446524FA33A0008762C4 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				80ED446624FA33B1008762C4 /* OpenWeatherMapWebServices.swift */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		80ED446824FA3740008762C4 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				80ED446924FA376F008762C4 /* WeatherViewModal.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		80ED446B24FA37B7008762C4 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				80ED446124FA31AA008762C4 /* APIConfig.swift */,
+				80ED446324FA3211008762C4 /* OpenWeatherMapModal.swift */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80ED446724FA33B1008762C4 /* OpenWeatherMapWebServices.swift in Sources */,
 				80EA1F4324F8F965007460A0 /* AppDelegate.swift in Sources */,
 				80EA1F4524F8F965007460A0 /* SceneDelegate.swift in Sources */,
+				80ED446224FA31AA008762C4 /* APIConfig.swift in Sources */,
 				80EA1F4724F8F965007460A0 /* ContentView.swift in Sources */,
+				80ED446A24FA376F008762C4 /* WeatherViewModal.swift in Sources */,
+				80ED446424FA3211008762C4 /* OpenWeatherMapModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
