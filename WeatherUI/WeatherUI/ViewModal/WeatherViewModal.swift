@@ -33,14 +33,16 @@ class WeatherViewModal: ObservableObject {
         
         weatherService.getWeatherByCity(city: city) { weather in
             if let weather = weather {
-                self.weather = weather
+                DispatchQueue.main.async {
+                    self.weather = weather
+                }
             }
         }
     }
     
     var temperature: String {
         if let temp = weather.temp {
-            return String(format: roundingNumberFormat, temp)
+            return "Temperature - " + String(format: roundingNumberFormat, temp)
         } else {
             return ""
         }
@@ -48,7 +50,7 @@ class WeatherViewModal: ObservableObject {
     
     var humidity: String {
         if let hum = weather.humidity {
-            return String(format: roundingNumberFormat, hum)
+            return "Humidity - " + String(format: roundingNumberFormat, hum)
         } else {
             return ""
         }

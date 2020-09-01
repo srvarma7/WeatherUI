@@ -64,12 +64,12 @@
 		80EA1F4124F8F965007460A0 /* WeatherUI */ = {
 			isa = PBXGroup;
 			children = (
+				80EA1F4224F8F965007460A0 /* AppDelegate.swift */,
+				80EA1F4424F8F965007460A0 /* SceneDelegate.swift */,
 				80ED446B24FA37B7008762C4 /* Modal */,
 				80ED446824FA3740008762C4 /* ViewModal */,
 				80ED446524FA33A0008762C4 /* WebServices */,
-				80EA1F4224F8F965007460A0 /* AppDelegate.swift */,
-				80EA1F4424F8F965007460A0 /* SceneDelegate.swift */,
-				80EA1F4624F8F965007460A0 /* ContentView.swift */,
+				80ED446C24FA4154008762C4 /* View */,
 				80EA1F4824F8F96D007460A0 /* Assets.xcassets */,
 				80EA1F4D24F8F96D007460A0 /* LaunchScreen.storyboard */,
 				80EA1F5024F8F96D007460A0 /* Info.plist */,
@@ -109,6 +109,14 @@
 				80ED446324FA3211008762C4 /* OpenWeatherMapModal.swift */,
 			);
 			path = Modal;
+			sourceTree = "<group>";
+		};
+		80ED446C24FA4154008762C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80EA1F4624F8F965007460A0 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
